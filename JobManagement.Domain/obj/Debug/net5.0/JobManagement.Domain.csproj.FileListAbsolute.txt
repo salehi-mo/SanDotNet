@@ -1,0 +1,17 @@
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\bin\Debug\net5.0\JobManagement.Domain.deps.json
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\bin\Debug\net5.0\JobManagement.Domain.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\bin\Debug\net5.0\ref\JobManagement.Domain.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\bin\Debug\net5.0\JobManagement.Domain.pdb
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\bin\Debug\net5.0\0_Framework.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\bin\Debug\net5.0\JobManagement.Application.Contracts.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\bin\Debug\net5.0\0_Framework.pdb
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\bin\Debug\net5.0\JobManagement.Application.Contracts.pdb
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\obj\Debug\net5.0\JobManagement.Domain.csproj.AssemblyReference.cache
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\obj\Debug\net5.0\JobManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\obj\Debug\net5.0\JobManagement.Domain.AssemblyInfoInputs.cache
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\obj\Debug\net5.0\JobManagement.Domain.AssemblyInfo.cs
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\obj\Debug\net5.0\JobManagement.Domain.csproj.CoreCompileInputs.cache
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\obj\Debug\net5.0\JobManagement.Domain.csproj.CopyComplete
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\obj\Debug\net5.0\JobManagement.Domain.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\obj\Debug\net5.0\ref\JobManagement.Domain.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\JobManagement.Domain\obj\Debug\net5.0\JobManagement.Domain.pdb

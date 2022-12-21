@@ -1,0 +1,12 @@
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\bin\Debug\net5.0\01_SanaDotNetQuery.deps.json
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\bin\Debug\net5.0\01_SanaDotNetQuery.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\bin\Debug\net5.0\ref\01_SanaDotNetQuery.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\bin\Debug\net5.0\01_SanaDotNetQuery.pdb
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\obj\Debug\net5.0\01_SanaDotNetQuery.GeneratedMSBuildEditorConfig.editorconfig
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\obj\Debug\net5.0\01_SanaDotNetQuery.AssemblyInfoInputs.cache
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\obj\Debug\net5.0\01_SanaDotNetQuery.AssemblyInfo.cs
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\obj\Debug\net5.0\01_SanaDotNetQuery.csproj.CoreCompileInputs.cache
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\obj\Debug\net5.0\01_SanaDotNetQuery.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\obj\Debug\net5.0\ref\01_SanaDotNetQuery.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\obj\Debug\net5.0\01_SanaDotNetQuery.pdb
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\01_SanaDotNetQuery\obj\Debug\net5.0\01_SanaDotNetQuery.csproj.AssemblyReference.cache

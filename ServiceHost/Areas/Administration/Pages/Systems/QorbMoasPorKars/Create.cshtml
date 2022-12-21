@@ -1,0 +1,102 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Systems.QorbMoasPorKars.CreateModel
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">ایجاد کارگاه جدید</h4>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">ایجاد کارگاه جدید</h3>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <form method="post">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.Name" class="control-label">نام</label>
+                                        <input type="text" class="form-control" asp-for="Command.Name" onchange="makeSlug('Name', 'Slug')">
+                                        <span asp-validation-for="Command.Name" class="error"></span>
+                                    </div>
+                                </div><div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.QorbMoasPorKarId_sana" class="control-label">کد</label>
+                                        <input type="text" class="form-control" asp-for="Command.QorbMoasPorKarId_sana">
+                                        <span asp-validation-for="Command.QorbMoasPorKarId_sana" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.QorbId" class="control-label">قرب/هلدینگ</label>
+                                        <select class="form-control" asp-for="Command.QorbId"
+                                                asp-items=Model.Qorbs onchange="retQorbMoasList(this.value)">
+                                            <option value="-1">لطفا قرب/هلدینگ را انتخاب نمایید</option>
+                                        </select>
+                                        <span asp-validation-for="Command.QorbId" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.QorbMoasId" class="control-label">موسسه</label>
+                                        <select id="QorbMoas" class="form-control" asp-for="Command.QorbMoasId"
+                                                asp-items=Model.QorbMoass  onchange="retQorbMoasPorList(this.value)">
+                                            <option value="-1">لطفا موسسه را انتخاب نمایید</option>
+                                        </select>
+                                        <span asp-validation-for="Command.QorbMoasId" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.QorbMoasPorId" class="control-label">پروژه</label>
+                                        <select id="QorbMoasPor" class="form-control" asp-for="Command.QorbMoasPorId"
+                                                asp-items=Model.QorbMoasPors>
+                                            <option value="-1">لطفا پروژه را انتخاب نمایید</option>
+                                        </select>
+                                        <span asp-validation-for="Command.QorbMoasPorId" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.Slug" class="control-label">اسلاگ</label>
+                                        <input type="text" class="form-control" asp-for="Command.Slug">
+                                        <span asp-validation-for="Command.Slug" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+                            <a asp-page="./Index" class="btn btn-dark waves-effect waves-light m-b-5">بازگشت</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

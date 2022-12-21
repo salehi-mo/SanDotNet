@@ -1,0 +1,122 @@
+﻿@page
+@using System.Reflection.Metadata
+@model ServiceHost.Pages.AccountVerifyModel
+@{
+    ViewData["Title"] = "ورود و ثبت نام";
+}
+
+<div class="breadcrumb-area section-space--half">
+    <div class="container wide">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-wrapper breadcrumb-bg">
+                    <div class="breadcrumb-content">
+                        <h2 class="breadcrumb-content__title">ورود و ثبت نام</h2>
+                        <ul class="breadcrumb-content__page-map">
+                            <li><a asp-page="/Index">صفحه اصلی</a></li>
+                            <li class="active">ورود - ثبت نام</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-wrapper">
+                    <div class="page-content-wrapper">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+                                @if (Model.VerifyMessage != null)
+                                {
+                                    <div class="alert alert-danger">@Model.VerifyMessage</div>
+                                }
+                                @if (TempData["FirstTime"] != "")
+                                {
+                                    TempData.Keep("FirstTime");
+                                    <script type="text/javascript">
+                                        
+                                        window.onload = event => {
+                                            startTimer();
+                                            //startTimer(document.getElementById('minutes').innerText, document.getElementById('seconds').innerText);
+                                            document.getElementById('ReVerifyCode').innerText = 'کد اسال شد';
+                                            //document.getElementById('ReVerifyCode').onclick = "return false";
+                                            //document.getElementById('ReVerifyCode').cursor = pointer;
+                                            //document.getElementById('ReVerifyCode').disabled = "disabled";
+                                            document.getElementById('ReVerifyCode').href = "javascript:function() { return false; }";
+
+                                            
+                                            
+
+                                            
+                                        };
+                                    </script>
+                                }
+
+                                <form method="post" asp-page-handler="Verify">
+                                    <div class="login-form">
+
+                                        <div class="row">
+                                            <div class="col-md-12 col-12">
+                                                <div class="row">
+                                                    <div class="col-md-3 col-3">
+
+                                                    </div>
+                                                    <div class="col-md-6 col-6">
+                                                        <h4 class="login-title">اعتبار سنجی کد تایید</h4>
+                                                        <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-4 col-4">
+                                                                    <label>کد تایید</label>
+                                                                    <input type="text" name="Verifycode" placeholder="000000">
+                                                                </div>
+
+                                                                <div class="col-sm-4 text-left text-sm-right">
+
+                                                                    @*<a class="btn-start-timer" asp-page-handler="ReVerifyCode" onclick="startTimer()">دریافت کد</a>*@
+                                                                    <a id ="ReVerifyCode" class="btn-start-timer" asp-page-handler="ReVerifyCode" >دریافت کد</a>
+                                                                </div>
+
+                                                                <div class="col-md-4 col-4 otp-timer">
+
+                                                                    <span class="VerifyTimer" id="seconds" name="seconds">00</span>
+                                                                    <span class="dot">:</span>
+                                                                    <span class="VerifyTimer" id="minutes" name="minutes">0</span>
+
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            @*<input type="hidden" id="hidminutes" name="hidminutes" value="this.minutes" />
+                                                            <input type="hidden" id="hidseconds" name="hidseconds" value="this.seconds" />*@
+                                                            <button class="register-button">ورود</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3 col-3">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+</script>

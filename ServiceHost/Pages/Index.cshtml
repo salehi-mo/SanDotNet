@@ -1,0 +1,105 @@
+﻿@page
+@using Kendo.Mvc.UI
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<link href="~/Kendo/styles/kendo.common.min.css" rel="stylesheet">
+<link href="~/Kendo/styles/kendo.rtl.min.css" rel="stylesheet">
+<link href="~/Kendo/styles/kendo.default.min.css" rel="stylesheet">
+<br />
+<br />
+<div class="k-rtl">
+    <div id="numslider">
+        <input />
+        <input />
+    </div>
+</div>
+<br />
+
+
+<br />
+
+
+<br />
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">جستجو در پروژه ها </h3>
+            </div>
+            <div class="panel-body">
+                <form class="form-inline" role="form" method="get">
+                    <div class="form-group">
+                        <label class="sr-only" asp-for="SearchModel.Name"></label>
+                        <input class="form-control" asp-for="SearchModel.Name" placeholder="نام پروژه">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" asp-for="SearchModel.QorbId"></label>
+                        <select id="Qorb" class="form-control" asp-for="SearchModel.QorbId" asp-items="Model.Qorbs" onchange="retQorbMoasList(this.value)">
+                            <option value="-1">لطفا قرب/هلدینگ را انتخاب نمایید</option>
+                        </select>
+                        <input type="hidden" asp-for="SearchModel.QorbId" />
+                    </div>
+                    <div id="div_QorbMoas" class="form-group">
+                        <label class="sr-only"></label>
+                        <select id="QorbMoas" class="form-control">
+                            <option value="-1">لطفا موسسه را انتخاب نمایید</option>
+                        </select>
+                        <input type="hidden" asp-for="SearchModel.QorbMoasId" />
+                    </div>
+                    <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">جستجو</button>
+                    <a class="btn btn-primary waves-effect waves-light m-l-10" asp-page="./Index">مشاهده همه</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/Kendo/js/kendo.all.min.js"></script>
+
+    <script>
+        $(function () {
+            // The Name() of the Grid is used to get its client-side instance.
+            var grid = $("#grid").data("kendoGrid");
+        });
+    </script>
+}
+
+
+@*@section     Scripts {
+        <script src="~/adminTheme/assets/datatables/jquery.dataTables.min.js"></script>
+        <script src="~/adminTheme/assets/datatables/dataTables.bootstrap.js"></script>
+        <script type="text/javascript">
+            $(document).ready(
+                function() {
+                    $("#Qorb").on('change', function(e) {
+                            var getid = $('#Qorb').val();
+                            const settings = {
+                                "url": "/api/job/" + getid,
+                                "method": "Post",
+                                "timeout": 0,
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                }
+                            };
+                            $.ajax(settings).done(function(data) {
+                                if (data.status == "success") {
+                                    $('#QorbMoas').empty();
+                                    var s = '<option value="-1">لطفا موسسه را انتخاب نمایید</option>';
+                                    $("#QorbMoas").append(s);
+                                    $.each(data.qorbmoass,
+                                        function (i,item) {
+                                            $('#QorbMoas').append($("<option></option>")
+                                                .val(item.value).html(item.text));
+                                    });
+                                }
+                            });
+                    });
+              }
+            );
+        </script>
+    }*@

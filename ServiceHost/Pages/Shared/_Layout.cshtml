@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @if (ViewData["Title"] != null)
+    {
+        <title>@ViewData["Title"] - سامانه جامع منابع انسانی و آموزش</title>
+    }
+    else
+    {
+        <title>سامانه جامع منابع انسانی و آموزش</title>
+    }
+
+    @*<meta name="keywords" content="@ViewData["keywords"]" />
+        <meta name="description" content="@ViewData["metaDescription"]" />*@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <link href="~/Theme/assets/css/vendors.css" rel="stylesheet">
+    <link href="~/Theme/assets/css/style.css" rel="stylesheet">
+    <link href="~/Theme/assets/css/Custom.css" rel="stylesheet">
+
+    <link href="~/Kendo/styles/kendo.common.min.css" rel="stylesheet">
+    <link href="~/Kendo/styles/kendo.rtl.min.css" rel="stylesheet">
+    <link href="~/Kendo/styles/kendo.default.min.css" rel="stylesheet">
+
+
+    @*@{ var kendoVersion = "2022.2.621"; }*@
+    @{ var kendoVersion = "2022.3.913"; }
+
+   
+    <link href="~/Kendo/styles/kendo.material-main.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/Kendo/js/jquery.min.js"></script>
+    <script src="~/Kendo/js/jszip.min.js"></script>
+    <script src="~/Kendo/js/kendo.all.min.js"></script>
+    <script src="~/Kendo/js/kendo.aspnetmvc.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+</head>
+
+<body>
+
+    @*@await Component.InvokeAsync("Menu")*@
+
+    @RenderBody()
+
+    @await Component.InvokeAsync("Footer")
+
+
+    <div class="search-overlay" id="search-overlay">
+        <a href="javascript:void(0)" class="close-search-overlay" id="close-search-overlay">
+            <i class="ion-ios-close-empty"></i>
+        </a>
+        <div class="search-form">
+            <form method="get" asp-page="/Search">
+                <input type="search" name="value" id="value" placeholder="هرچه می خواهید در سامانه جستجو کنید ...">
+                <button type="submit">
+                    <i class="ion-android-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="scroll-top">
+        <span>برو بالا</span><i class="ion-chevron-right"></i><i class="ion-chevron-right"></i>
+    </div>
+
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>*@
+    <script src="~/Theme/assets/js/vendors.js"></script>
+    <script src="~/Theme/assets/js/active.js"></script>
+    <script src="~/Theme/assets/js/plugins.js"></script>
+    <script src="~/Theme/assets/js/custom.js"></script>
+    <script src="~/Theme/assets/js/Timer.js"></script>
+    <script src="~/Kendo/js/kendo.all.min.js"></script>
+    
+
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+
+    
+
+@*<script>
+    $(document).ready(function () {
+        updateCart();
+    });
+</script>*@
+
+@RenderSection("Scripts", false)
+
+</body>
+
+</html>

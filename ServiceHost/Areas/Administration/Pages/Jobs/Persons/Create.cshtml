@@ -1,0 +1,176 @@
+﻿@page
+@model ServiceHost.Areas.Administration.Pages.Jobs.Persons.CreateModel
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h4 class="modal-title">ایجاد پرسنل جدید</h4>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">ایجاد پرسنل جدید</h3>
+            </div>
+            <div class="panel-body">
+                @if (Model.Message != null)
+                {
+                    <div class="alert alert-danger">@Model.Message</div>
+                }
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <form method="post">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.Nam" class="control-label">نام</label>
+                                        <input type="text" class="form-control" asp-for="Command.Nam" onchange="makeSlug('Name', 'Slug')">
+                                        <span asp-validation-for="Command.Nam" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.Fam" class="control-label">نام خانوادگی</label>
+                                        <input type="text" class="form-control" asp-for="Command.Fam">
+                                        <span asp-validation-for="Command.Fam" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.NamPed" class="control-label">نام پدر</label>
+                                        <input type="text" class="form-control" asp-for="Command.NamPed">
+                                        <span asp-validation-for="Command.NamPed" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.NoShe" class="control-label">شماره شناسنامه</label>
+                                        <input type="text" class="form-control" asp-for="Command.NoShe">
+                                        <span asp-validation-for="Command.NoShe" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.CodMelli" class="control-label">کد ملی</label>
+                                        <input type="text" class="form-control" asp-for="Command.CodMelli">
+                                        <span asp-validation-for="Command.CodMelli" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.PerId" class="control-label">کد</label>
+                                        <input type="text" class="form-control" asp-for="Command.PerId">
+                                        <span asp-validation-for="Command.PerId" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.PersonEshtegVazId" class="control-label">وضعیت اشتغال</label>
+                                        <select id="PersonEshtegVaz" class="form-control" asp-for="Command.PersonEshtegVazId"
+                                                asp-items=Model.PersonEshtegVazs>
+                                            <option value="-1">لطفا وضعیت اشتغال را انتخاب نمایید</option>
+                                        </select>
+                                        <span asp-validation-for="Command.PersonEshtegVazId" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.PersonOzvNoaId" class="control-label">نوع عضویت</label>
+                                        <select id="PersonOzvNoa" class="form-control" asp-for="Command.PersonOzvNoaId"
+                                                asp-items=Model.PersonOzvNoas>
+                                            <option value="-1">لطفا نوع عضویت را انتخاب نمایید</option>
+                                        </select>
+                                        <span asp-validation-for="Command.PersonOzvNoaId" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.QorbId" class="control-label">قرب/هلدینگ</label>
+                                        <select class="form-control" asp-for="Command.QorbId"
+                                                asp-items=Model.Qorbs onchange="retQorbMoasList(this.value)">
+                                            <option value="-1">لطفا قرب/هلدینگ را انتخاب نمایید</option>
+                                        </select>
+                                        <span asp-validation-for="Command.QorbId" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.QorbMoasId" class="control-label">موسسه</label>
+                                        <select id="QorbMoas" class="form-control" asp-for="Command.QorbMoasId"
+                                                asp-items=Model.QorbMoass onchange="retQorbMoasPorList(this.value)">
+                                            <option value="-1">لطفا موسسه را انتخاب نمایید</option>
+                                        </select>
+                                        <span asp-validation-for="Command.QorbMoasId" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.QorbMoasPorId" class="control-label">پروژه</label>
+                                        <select id="QorbMoasPor" class="form-control" asp-for="Command.QorbMoasPorId"
+                                                asp-items=Model.QorbMoasPors onchange="retQorbMoasPorKarList(this.value)">
+                                            <option value="-1">لطفا پروژه را انتخاب نمایید</option>
+                                        </select>
+                                        <span asp-validation-for="Command.QorbMoasPorId" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label asp-for="Command.QorbMoasPorKarId" class="control-label">کارگاه</label>
+                                        <select id="QorbMoasPorKar" class="form-control" asp-for="Command.QorbMoasPorKarId"
+                                                asp-items=Model.QorbMoasPorKars>
+                                            <option value="-1">لطفا کارگاه را انتخاب نمایید</option>
+                                        </select>
+                                        <span asp-validation-for="Command.QorbMoasPorKarId" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label asp-for="Command.Slug" class="control-label">اسلاگ</label>
+                                        <input type="text" class="form-control" asp-for="Command.Slug">
+                                        <span asp-validation-for="Command.Slug" class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-info waves-effect waves-light">ایجاد</button>
+                            <a asp-page="./Index" class="btn btn-dark waves-effect waves-light m-b-5">بازگشت</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

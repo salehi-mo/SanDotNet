@@ -1,0 +1,79 @@
+﻿@model GridCrudOperationsModel
+@using ServiceHost
+@using Kendo.Mvc.UI
+@using JobManagement.Application.Contracts.QorbMoasPor
+@using System.Collections;
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Command_EditQorbMoasPor.Id)
+</div>
+<div class="editor-field">
+    @(Html.Kendo().TextBoxFor(model => model.Command_EditQorbMoasPor.Id)
+    .Enable(false)
+    )
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Command_EditQorbMoasPor.Slug)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Command_EditQorbMoasPor.Slug)
+    @Html.ValidationMessageFor(model => model.Command_EditQorbMoasPor.Slug)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Command_EditQorbMoasPor.Name)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Command_EditQorbMoasPor.Name)
+    @Html.ValidationMessageFor(model => model.Command_EditQorbMoasPor.Name)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Command_EditQorbMoasPor.QorbId)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Command_EditQorbMoasPor.QorbId)
+    @Html.ValidationMessageFor(model => model.Command_EditQorbMoasPor.QorbId)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Command_EditQorbMoasPor.QorbMoasId)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Command_EditQorbMoasPor.QorbMoasId)
+    @Html.ValidationMessageFor(model => model.Command_EditQorbMoasPor.QorbMoasId)
+</div>
+
+@*<div class="editor-label">
+    @Html.LabelFor(model => model.StateProvinceId)
+</div>
+<div class="editor-dropdown">
+    @(Html.Kendo().DropDownListFor(model => model.StateProvinceId)
+    //.Name("StateProvince")
+    .HtmlAttributes(new { @StateProvinceId = "StateProvince" })
+    .Filter("startswith")
+    .DataValueField("StateProvinceId")
+    .DataTextField("StateAbbName")
+    .BindTo((System.Collections.IEnumerable)ViewData["StateProvinces"])
+    )
+</div>
+
+
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.CountryRegionId)
+</div>
+
+<div class="editor-dropdown">
+    @(Html.Kendo().DropDownListFor(model => model.CountryRegionId)
+    //.Name("CountryRegion")
+    .HtmlAttributes(new { @CountryRegionId = "CountryRegion" })
+    //.Filter("startswith")
+    .DataValueField("CountryRegionId")
+    .DataTextField("CountryCode")
+    //.AutoBind(true)
+    .BindTo((System.Collections.IEnumerable)ViewData["CountryRegions"])
+    //.ToClientTemplate()
+    )
+</div>*@

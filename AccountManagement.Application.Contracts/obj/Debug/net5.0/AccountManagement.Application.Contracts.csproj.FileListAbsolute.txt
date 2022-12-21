@@ -1,0 +1,15 @@
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\bin\Debug\net5.0\AccountManagement.Application.Contracts.deps.json
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\bin\Debug\net5.0\AccountManagement.Application.Contracts.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\bin\Debug\net5.0\ref\AccountManagement.Application.Contracts.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\bin\Debug\net5.0\AccountManagement.Application.Contracts.pdb
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\bin\Debug\net5.0\0_Framework.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\bin\Debug\net5.0\0_Framework.pdb
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\obj\Debug\net5.0\AccountManagement.Application.Contracts.csproj.AssemblyReference.cache
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\obj\Debug\net5.0\AccountManagement.Application.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\obj\Debug\net5.0\AccountManagement.Application.Contracts.AssemblyInfoInputs.cache
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\obj\Debug\net5.0\AccountManagement.Application.Contracts.AssemblyInfo.cs
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\obj\Debug\net5.0\AccountManagement.Application.Contracts.csproj.CoreCompileInputs.cache
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\obj\Debug\net5.0\AccountManagement.Application.Contracts.csproj.CopyComplete
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\obj\Debug\net5.0\AccountManagement.Application.Contracts.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\obj\Debug\net5.0\ref\AccountManagement.Application.Contracts.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Application.Contracts\obj\Debug\net5.0\AccountManagement.Application.Contracts.pdb

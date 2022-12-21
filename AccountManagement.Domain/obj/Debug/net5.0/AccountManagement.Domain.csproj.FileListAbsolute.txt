@@ -1,0 +1,17 @@
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\bin\Debug\net5.0\AccountManagement.Domain.deps.json
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\bin\Debug\net5.0\AccountManagement.Domain.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\bin\Debug\net5.0\ref\AccountManagement.Domain.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\bin\Debug\net5.0\AccountManagement.Domain.pdb
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\bin\Debug\net5.0\0_Framework.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\bin\Debug\net5.0\AccountManagement.Application.Contracts.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\bin\Debug\net5.0\0_Framework.pdb
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\bin\Debug\net5.0\AccountManagement.Application.Contracts.pdb
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\obj\Debug\net5.0\AccountManagement.Domain.csproj.AssemblyReference.cache
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\obj\Debug\net5.0\AccountManagement.Domain.GeneratedMSBuildEditorConfig.editorconfig
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\obj\Debug\net5.0\AccountManagement.Domain.AssemblyInfoInputs.cache
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\obj\Debug\net5.0\AccountManagement.Domain.AssemblyInfo.cs
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\obj\Debug\net5.0\AccountManagement.Domain.csproj.CoreCompileInputs.cache
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\obj\Debug\net5.0\AccountManagement.Domain.csproj.CopyComplete
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\obj\Debug\net5.0\AccountManagement.Domain.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\obj\Debug\net5.0\ref\AccountManagement.Domain.dll
+G:\DotNetCore\SanaDotNetCore\SanaDotNet\AccountManagement.Domain\obj\Debug\net5.0\AccountManagement.Domain.pdb
